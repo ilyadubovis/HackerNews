@@ -1,0 +1,12 @@
+<div class="pagination-panel">
+  <div class="pagination">
+    <div id="back-icon" class="nav-btn" (click)="prevPage()"></div>
+    <small>{{ pageIndex() }}/{{ pageCount() }}</small>
+    <div id="next-icon" class="nav-btn" (click)="nextPage()"></div>
+  </div>
+</div>
+<div class="news-list">
+  <div class="story-container" *ngFor="let story of newsList()">
+    <app-news-list-item [story]="story" />
+  </div>
+</div>

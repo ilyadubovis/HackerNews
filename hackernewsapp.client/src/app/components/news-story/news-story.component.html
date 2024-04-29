@@ -1,0 +1,8 @@
+<p>
+  <span class="link" (click)="openLink()">{{ story.title }} </span>
+</p>
+<p>
+  <small>
+    {{ story.score }} points by {{ story.by }} | {{ story.time | distanceTime }} | {{ story.kids?.length || 0 }} comments
+  </small>
+</p>

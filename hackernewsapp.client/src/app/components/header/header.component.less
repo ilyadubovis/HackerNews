@@ -1,0 +1,35 @@
+:host {
+  .title-bar {
+    background-color: darkblue;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    height: 50px;
+    justify-content: start;
+    align-items: center;
+    background: transparent;
+    font-size: 1.125rem;
+    list-style: none;
+    margin-top: 10px;
+
+    li {
+      margin: 0 20px;
+
+      .menu-item {
+        text-decoration: none;
+        color: white;
+
+        &.active {
+          font-style: italic;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
