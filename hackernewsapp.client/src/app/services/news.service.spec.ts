@@ -55,7 +55,7 @@ describe('NewsService', () => {
         mockReq.flush(story);
     });
 
-    it('should return no news stories for invalid id', () => {
+    it('should return no news story for invalid id', () => {
         service.getNewsStoryById('999').subscribe((story: NewsStory) => {
             expect(story).toBeNull();
         });

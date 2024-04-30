@@ -3,6 +3,7 @@ using HackerNewsApp.Server.Models;
 using HackerNewsApp.Server.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System;
 
 namespace HackerNewsServerTest;
 
@@ -101,7 +102,11 @@ public class NewsServiceTest
         var story = (response.Result as OkObjectResult)!.Value as NewsStory;
 
         Assert.AreEqual(story!.Title, "Title");
+        Assert.AreEqual(story!.Type, "Type");
         Assert.AreEqual(story!.Score, 1);
+        Assert.AreEqual(story!.Decscendants, 0);
+        Assert.AreEqual(story!.By, "By");
+        Assert.AreEqual(story!.Time, 12345);
         Assert.AreEqual(story!.Url, "http://www.abc.com");
     }
 
